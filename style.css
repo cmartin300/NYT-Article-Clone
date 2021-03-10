@@ -1,0 +1,58 @@
+/* Resets */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Globals */
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Shippori Mincho B1', serif;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* Navigation */
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    justify-items: center;
+    align-items: center;
+    border: 5px solid red;
+}
+
+.logo {
+    width: 100%;
+    text-align: center;
+}
+
+.nav-left {
+    display: flex;
+    max-width: 40%;
+}
+
+.nav-left > * + * {
+    margin-left: 1rem;
+}
