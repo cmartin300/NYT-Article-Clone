@@ -28,6 +28,12 @@ h6 {
     font-family: 'Shippori Mincho B1', serif;
 }
 
+h2 {
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
 img {
     display: block;
     width: 100%;
@@ -37,22 +43,74 @@ img {
 
 .nav-bar {
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    justify-items: center;
+    grid-template-columns: minmax(0, auto) minmax(0, 1fr) minmax(0, auto);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    justify-content: center;
     align-items: center;
-    border: 5px solid red;
+}
+
+.hamburger,
+.search {
+    width: 1.5rem;
+}
+
+.nav-right a {
+    font-size: 0.75rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(90, 90, 182);
+    padding: 0.5em;
+    border-radius: 0.25rem;
+}
+
+.nav-right > * {
+    margin-right: 1rem;
 }
 
 .logo {
-    width: 100%;
     text-align: center;
 }
 
 .nav-left {
     display: flex;
-    max-width: 40%;
+    align-items: center;
+    white-space: nowrap;
 }
 
-.nav-left > * + * {
+.nav-left > * {
     margin-left: 1rem;
+}
+
+/* Main Container */
+
+.main-container {
+    width: 45vw;
+    margin: 0 auto;
+}
+
+.social-links {
+    display: flex;
+    padding: 1.5rem 0 1.5rem 0;
+    gap: 2.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.social-links li {
+    list-style: none;
+    width: 1rem;
+    position: relative;
+}
+
+.social-links li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    left: 50%;
+    margin-left: -1rem;
+    top: 50%;
+    margin-top: -1rem;
 }
