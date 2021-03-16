@@ -17,6 +17,7 @@ body {
     padding: 0;
     color: #333;
     font-family: 'Libre Franklin', sans-serif;
+    line-height: 1.6;
 }
 
 h1,
@@ -26,12 +27,26 @@ h4,
 h5,
 h6 {
     font-family: 'Shippori Mincho B1', serif;
+    line-height: 1.1;
 }
 
 h2 {
     font-size: 2.5rem;
     font-style: italic;
     font-weight: bold;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    font-weight: lighter;
+    line-height: 1.5;
+    padding-top: 0.75rem;
+    color: rgba(0, 0, 0, 0.75);
+    width: 75%;
+}
+
+figcaption span {
+    color: rgba(0, 0, 0, 0.5);
 }
 
 img {
@@ -44,9 +59,13 @@ img {
 .nav-bar {
     display: grid;
     grid-template-columns: minmax(0, auto) minmax(0, 1fr) minmax(0, auto);
+    background-color: #fff;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     justify-content: center;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .hamburger,
@@ -84,8 +103,40 @@ img {
 /* Main Container */
 
 .main-container {
-    width: 45vw;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.header {
+    grid-column: 5 / 9;
+}
+
+.hero-image {
+    grid-column: 3 / 11;
+}
+
+.article-details {
+    grid-column: 5 / 9;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 2rem 0 4rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.article-details span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.article-details .date {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.article-section {
+    grid-column: 5 / 9;
+    padding-bottom: 1rem;
 }
 
 .social-links {
@@ -113,4 +164,36 @@ img {
     margin-left: -1rem;
     top: 50%;
     margin-top: -1rem;
+}
+
+.signup-cta {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.signup-cta button {
+    padding: 0.5rem 1rem;
+    width: min-content;
+    white-space: nowrap;
+    background-color: #fff;
+    color: black;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.signup-cta button:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.signup-cta span {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.9);
 }
